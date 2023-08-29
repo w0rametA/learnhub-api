@@ -40,7 +40,7 @@ async function main(){
     const contentRouter = express.Router()
     const authRouter = express.Router()
 
-    server.use(express.json());
+    
     server.use("/user", userRouter);
     server.use("/content", contentRouter)
     server.use("/auth", authRouter)

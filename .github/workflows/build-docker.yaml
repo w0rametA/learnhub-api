@@ -1,0 +1,15 @@
+name: learnhub-api-in-git-action
+run-name: ${{ github.actor }} is learning GitHub Actions again.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main, develop]
+jobs:
+  test:
+    name: Test learnhub api code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: npm i
